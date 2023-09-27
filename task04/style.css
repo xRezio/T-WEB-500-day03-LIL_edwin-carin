@@ -1,0 +1,97 @@
+*{
+    margin: 5px;
+    padding: 0px;
+}
+
+body{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header{
+    flex: 10;
+
+}
+
+main{
+    flex: 15;
+    display: flex;
+    flex-direction: column;
+}
+
+#First{
+    height: 10vh;
+}
+
+
+article{
+    flex: 1;
+    display: flex;
+}
+
+footer{
+    flex: 10;
+    position: sticky;
+    bottom: 0px;
+}
+
+.grid-item{
+    height: 30vh;
+}
+
+nav, article, section, footer{
+    width: -webkit-fill-available;
+}
+
+
+@media screen and (max-width: 767px) {
+    .grid-item:nth-child(n+3) {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 767px) and (max-width: 1024px) {
+    header{
+        width: calc(50vw - 2vh);
+    }
+
+    #Second{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Crée deux colonnes égales */
+    }
+    .grid-item:nth-child(n+5) {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    header{
+        width: calc(33vw - 2vh);
+    }
+    #Second{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* Crée deux colonnes égales */
+        grid-gap: 10px; /* Espacement entre les éléments */
+    }
+}
+
+.blue{
+    background-color: rgb(19, 100, 144);
+  }
+  .red{
+    background-color: rgb(255, 0, 0);
+  }
+  .yellow{
+    background-color: rgb(216, 189, 11);
+  }
+  .violet{
+    background-color: rgb(67, 12, 111);
+  }
+  .pink{
+    background-color: rgb(131, 33, 131);
+  }
+  .green{
+    background-color: rgb(1, 161, 1);
+  }
